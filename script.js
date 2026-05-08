@@ -31,9 +31,11 @@ function saveData(){
 }
 
 listContainer.addEventListener("click",function(e){
-    e.target.tagName=="SPAN"
+   if(e.target.tagName==="SPAN"){
     e.target.parentElement.remove()
-
+    saveData()
+   }
+   
 })
 
 function showData(){
